@@ -8,6 +8,7 @@ public class LinkedList {
     }
 
     public void addFirst(int value){
+        System.out.println("Adding "+value+" at first");
         Node n = new Node();
         n.setValue(value);
         n.setNode(first);
@@ -16,12 +17,13 @@ public class LinkedList {
 
     public void delete(int val){
         if(first == null){
-            System.out.println("Empty");
+            System.out.println("Linked List doesn't contains "+val);
         }
         else{
+            System.out.println(val+" selected to be deleted from LinkedList");
             Node c = first;
             Node prev = null;
-            while(c.getValue() != val){
+            while(c != null && c.getValue() != val){
                 prev = c;
                 c=c.node;
 
@@ -29,8 +31,11 @@ public class LinkedList {
             if(c == first){
                 first = first.node;
             }
-            else{
+            else if (c != null){
                 prev.node=c.node;
+            }
+            else{
+                System.out.println("Value "+val+" not present in Linked List");
             }
 
         }
@@ -38,14 +43,16 @@ public class LinkedList {
 
     public void display(){
         if(first == null){
-            System.out.println("Empty LL");
+            System.out.println("Empty Linked List");
         }
         else{
+            System.out.print("Displaying Contents of Linked List : ");
             Node c = first;
             while(c != null){
-                System.out.println(c.getValue());
+                System.out.print(c.getValue()+" ");
                 c=c.getNode();
             }
+            System.out.println("");
         }
     }
 }
