@@ -1,0 +1,9 @@
+This project is implementation of LinkedList in Java based on DSA
+ Project Contents :
+  1. LinkedListImpl -> Main class
+  2. LinkedList -> Helper class includes CRUD methods for Linked List
+  3. Node -> Helper class used for structuring of Nodes
+
+Run :
+  You can simply run this project just like java program after importing into any IDE.
+ 
