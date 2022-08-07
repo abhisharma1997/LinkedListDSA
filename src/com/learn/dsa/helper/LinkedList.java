@@ -1,27 +1,6 @@
-
-class Node{
-    int value;
-    Node node;
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public Node getNode() {
-        return node;
-    }
-
-    public void setNode(Node node) {
-        this.node = node;
-    }
-}
+package com.learn.dsa.helper;
 
 public class LinkedList {
-
     private Node first;
 
     public LinkedList(){
@@ -46,7 +25,7 @@ public class LinkedList {
                 prev = c;
                 c=c.node;
 
-                }
+            }
             if(c == first){
                 first = first.node;
             }
@@ -68,21 +47,5 @@ public class LinkedList {
                 c=c.getNode();
             }
         }
-    }
-
-
-
-    public static void main(String[] args){
-        LinkedList l = new LinkedList();
-        l.addFirst(10);
-        l.addFirst(20);
-        l.addFirst(30);
-        l.addFirst(40);
-        l.delete(30);
-        l.display();
-
-
-
-
     }
 }
